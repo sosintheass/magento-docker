@@ -29,7 +29,7 @@ RUN chmod +x /usr/local/bin/install-magento
 RUN a2enmod rewrite
 RUN sed -i -e 's/\/var\/www\/html/\/var\/www\/htdocs/' /etc/apache2/apache2.conf
 
-COPY ./sampledata/magento-sample-data-1.9.1.0.tgz /opt/
+COPY ./sampledata/magento-sample-data-1.9.2.4.tgz /opt/
 COPY ./bin/install-sampledata-1.9 /usr/local/bin/install-sampledata
 RUN chmod +x /usr/local/bin/install-sampledata
 
