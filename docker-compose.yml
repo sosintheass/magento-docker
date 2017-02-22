@@ -2,9 +2,13 @@ version: '2'
 
 services:
   web:
-    image: 
+    build: .
     ports:
       - "80:80"
+    volumes:
+      - /var/www/magento/app/etc:/var/www/magento/app/etc
+      - /var/www/magento/skin:/var/www/magento/skin
+      - /var/www/magento/var:/var/www/magento/var
     links:
       - mysql
     env_file:
